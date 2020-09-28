@@ -1,0 +1,16 @@
+{
+  "name": "RepBlazor",
+  "short_name": "RepBlazor",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#9c27b0",
+  "theme_color": "#9c27b0",
+  "icons":
+  [
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

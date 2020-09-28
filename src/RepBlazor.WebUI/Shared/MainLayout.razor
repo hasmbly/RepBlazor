@@ -1,0 +1,28 @@
+﻿@inherits LayoutComponentBase
+
+<MatThemeProvider Theme="@theme">
+    <NavMenu />
+
+    <MatAppBarContent>
+        <div class="content px-4">
+            <div class="mat-layout-grid">
+                <div class="mat-layout-grid-inner">
+                    <div class="mat-layout-grid-cell mat-layout-grid-cell-span-2"></div>
+                    <div class="mat-layout-grid-cell mat-layout-grid-cell-span-8">
+                        @Body
+                    </div>
+                    <div class="mat-layout-grid-cell mat-layout-grid-cell-span-2"></div>
+                </div>
+            </div>
+        </div>
+    </MatAppBarContent>
+</MatThemeProvider>
+
+@code
+{
+    MatTheme theme = new MatTheme()
+    {
+        Primary = MatThemeColors.Purple._500.Value,
+        Secondary = MatThemeColors.BlueGrey._500.Value
+    };
+}

@@ -1,0 +1,17 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles":
+  {
+    "RepBlazor.WebAPI":
+    {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/v1/dev/index",
+      "applicationUrl": "https://localhost:5004",
+      "environmentVariables":
+      {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
