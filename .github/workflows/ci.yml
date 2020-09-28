@@ -24,7 +24,7 @@ jobs:
           
         # changes the base-tag in index.html from '/' to 'RepBlazor' to match GitHub Pages repository subdirectory
         - name: Change base-tag in index.html from / to RepBlazor
-          run: sed -i 's/<base href="\/" \/>/<base href="\/RepBlazor\/" \/>/g' src/RepBlazor.WebUI/bin/Release/netstandard2.1/publish/wwwroot/index.html          
+          run: sed -i 's/<base href="\/" \/>/<base href="\/RepBlazor\/src\/RepBlazor.WebUI\/" \/>/g' src/RepBlazor.WebUI/bin/Release/netstandard2.1/publish/wwwroot/index.html          
 
         # Publish the website
         - name: GitHub Pages action
