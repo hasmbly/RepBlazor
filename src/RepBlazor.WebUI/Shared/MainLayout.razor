@@ -4,18 +4,42 @@
     <NavMenu />
 
     <MatAppBarContent>
-        <div class="content px-4">
-            <div class="mat-layout-grid">
-                <div class="mat-layout-grid-inner">
-                    <div class="mat-layout-grid-cell mat-layout-grid-cell-span-2"></div>
-                    <div class="mat-layout-grid-cell mat-layout-grid-cell-span-8">
-                        @Body
+
+
+        <MatDrawerContainer>
+            <MatDrawer @bind-Opened="@Opened">
+                Drawer Content
+            </MatDrawer>
+            <MatDrawerContent>
+                <div class="content px-4">
+                    <div class="mat-layout-grid">
+                        <div class="mat-layout-grid-inner">
+                            <div class="mat-layout-grid-cell mat-layout-grid-cell-span-10">
+                                <div>
+                                    <MatButton OnClick="@((e) => ButtonClicked())">
+                                        @if (Opened)
+                                        {
+                                            <span>Hide Menu</span>
+                                        }
+                                        else
+                                        {
+                                            <span>Open Menu</span>
+                                        }
+                                    </MatButton>
+                                </div>
+                                @Body
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="mat-layout-grid-cell mat-layout-grid-cell-span-2"></div>
                 </div>
-            </div>
-        </div>
+            </MatDrawerContent>
+        </MatDrawerContainer>
+
     </MatAppBarContent>
+
+
+
 </MatThemeProvider>
 
 @code
@@ -25,4 +49,11 @@
         Primary = MatThemeColors.Purple._500.Value,
         Secondary = MatThemeColors.BlueGrey._500.Value
     };
+
+    bool Opened = true;
+
+    void ButtonClicked()
+    {
+        Opened = !Opened;
+    }
 }
